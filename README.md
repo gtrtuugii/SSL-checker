@@ -30,7 +30,7 @@ crontab -e
 ```
 
 2. Add the following line to run the script daily at a specific time (e.g., 3:00 PM every Monday):
-
+```
     Schedule a cron job based on the remaining days
     *  *  * * * 
     │  │  │ │ └───── day of the week (0 - 7, both 0 and 7 represent Sunday)
@@ -38,7 +38,7 @@ crontab -e
     │  │  └───────── day of the month (1 - 31)
     │  └──────────── hour (0 - 23)
     └─────────────── minute (0 - 59)
-
+```
 ```bash
 0 15 * * 1 /usr/bin/python3 /path/to/SSL-checker/check-ssl.py
 ```
