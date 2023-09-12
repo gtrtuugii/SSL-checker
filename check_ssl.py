@@ -107,11 +107,12 @@ def main(url, date_threshold=30):
         else:
             # Reschedule?
             print("OKAY SSL")
+            return remaining_days
     else:
         print("Certificate information not found.")
 
 
 # Test websites
-#print(main("ciaobella.obsi.com.au"))
+# print(main("ciaobella.obsi.com.au"))
 # print(main("unitel.mn"))
 

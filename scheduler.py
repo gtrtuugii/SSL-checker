@@ -20,13 +20,10 @@ if remaining_days is not None:
     if remaining_days <= 7:
         # If expiration is within 7 days, schedule daily
         cron_schedule = "0 0 * * *"
-        print("less than 7days innnit")
     else:
         # If expiration is more than 7 days away, schedule weekly
         cron_schedule = "0 0 * * 1"
-        print("more than 7days innnit")
 
-    
     cron_command = f"python check_ssl.py"
     print(subprocess.run(f'(crontab -l ; echo "{cron_schedule} {cron_command}") | crontab -', shell=True))
 
